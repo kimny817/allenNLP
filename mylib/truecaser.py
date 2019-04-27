@@ -25,7 +25,7 @@ class TrueCaser(SimpleTagger):
                  initializer: InitializerApplicator = InitializerApplicator(),
                  regularizer: Optional[RegularizerApplicator] = None) -> None:
         super(TrueCaser, self).__init__(vocab, text_field_embedder, encoder, initializer, regularizer)
-        self.metrics["f1"] = F1Measure(positive_label=self.vocab.get_token_index("eng", namespace="labels"))
+        self.metrics["f1"] = F1Measure(positive_label=self.vocab.get_token_index("1", namespace="labels"))
 
     @overrides
     def get_metrics(self, reset: bool = False) -> Dict[str, float]:
