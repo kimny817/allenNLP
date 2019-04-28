@@ -1,0 +1,11 @@
+2019-04-27 17:38:25,567 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.data.dataset_readers.dataset_reader.DatasetReader'> from params {'type': 'sequence_tagging'} and extras {}
+2019-04-27 17:38:25,568 - INFO - allennlp.common.params - dataset_reader.type = sequence_tagging
+2019-04-27 17:38:25,568 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.data.dataset_readers.sequence_tagging.SequenceTaggingDatasetReader'> from params {} and extras {}
+2019-04-27 17:38:25,569 - INFO - allennlp.common.params - dataset_reader.word_tag_delimiter = ###
+2019-04-27 17:38:25,569 - INFO - allennlp.common.params - dataset_reader.token_delimiter = None
+2019-04-27 17:38:25,569 - INFO - allennlp.common.params - dataset_reader.token_indexers = <allennlp.common.params.Params object at 0x2b529896d860>
+2019-04-27 17:38:25,569 - INFO - allennlp.common.params - dataset_reader.lazy = False
+2019-04-27 17:38:25,570 - INFO - allennlp.common.params - validation_dataset_reader = None
+2019-04-27 17:38:25,570 - INFO - allennlp.common.params - train_data_path = data/train.txt
+2019-04-27 17:38:25,570 - INFO - allennlp.commands.train - Reading training data from data/train.txt
+2019-04-27 17:38:25,573 - INFO - allennlp.data.dataset_readers.sequence_tagging - Reading instances from lines in file at: data/train.txt
