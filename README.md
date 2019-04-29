@@ -1,9 +1,6 @@
 ## Truecaser
 
-This is a simple neural truecaser written with allennlp, and based loosely on ([Susanto et al, 2016](https://aclweb.org/anthology/D16-1225)). They have an
-implementation [here](https://gitlab.com/raymondhs/char-rnn-truecase), but being written in Lua, it's a little hard to use.
-
-We provide [pre-trained models](https://github.com/mayhewsw/pytorch-truecaser/releases/tag/v1.0) that can be used for truecasing English and German right out of the box. The English model is trained on the [standard Wikipedia data split](http://www.cs.pomona.edu/~dkauchak/simplification/data.v1/data.v1.split.tar.gz) from (Coster and Kauchak, 2011), and achieves an F1 score of **93.01** on test. This is comparable to the best F1 of (Susanto et al 2016) of **93.19**.
+This is a simple neural wine rating predictor written with allennlp.
 
 ### Requirements
 
@@ -11,13 +8,10 @@ We provide [pre-trained models](https://github.com/mayhewsw/pytorch-truecaser/re
 * [allennlp](https://github.com/allenai/allennlp/) (0.8.2)
 
 ### Model
-This model treats each sentence as a sequence of characters (spaces are included in the sequence). Each character takes a binary label
-of "U" if uppercase and "L" if lowercase. For example, the word `tRuEcasIng` would take the labels `LULULLLULL`
-
-We encode the sequence using a bidirectional LSTM with 2 hidden layers, 50 dimensional character embeddings (input), 150 dimensional hidden size, and dropout of 0.25.
+This model treats each sentence as a sequence of words. We encode the sequence using a bidirectional LSTM with 2 hidden layers, 50 dimensional character embeddings (input), 150 dimensional hidden size, and dropout of 0.25.
 
 ### Scoring
-A cautionary note is in order. The pytorch model optimizes for _character level_ F1 score, but it is more common to measure
+A cautionary note is in order. The pytorch model optimizes for _word level_ F1 score, but it is more common to measure
 on the _word level_. So, after training a model, get a comparable score using `word_eval.py` (which I copied from [here](https://gitlab.com/raymondhs/char-rnn-truecase/blob/master/word_eval.py))
 
 For example, to score on the Wiki test data:
