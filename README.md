@@ -1,4 +1,4 @@
-## Truecaser
+## Wine Rating Predictor
 
 This is a simple neural wine rating predictor written with allennlp.
 
